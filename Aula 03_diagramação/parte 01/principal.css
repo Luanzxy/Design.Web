@@ -1,0 +1,16 @@
+figure{
+    float: right;
+    /* O float permite que o atríbuto flutue para a esquerda ou para direita */
+}
+div.outrospercusos{
+    float: left;
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 1rem;
+}
+footer{
+    background-color: aquamarine;
+    padding: 1rem;
+clear: both;
+/* O elemento clear ele limpa os elementos que ficam flutuando */
+}
