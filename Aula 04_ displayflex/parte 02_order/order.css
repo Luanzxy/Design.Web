@@ -1,0 +1,31 @@
+body{
+    display: flex;
+}
+section{
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+/* Para utilizar o atríbuto de "order" precisa ordenar todos os filhos */
+}
+section.not-0{
+    order: 6;
+}
+section.not-1{
+    order: 5;
+}
+section.not-2{
+    order: 4;
+}
+section.not-3{
+    order: 3;
+}
+section.not-4{
+    order: 2;
+}
+section.not-5{
+    order: 1;
+}
+section.not-6{
+    order: 0;
+}
+/* Define a ordem do filho dentro do conteiner */
