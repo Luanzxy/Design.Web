@@ -1,0 +1,31 @@
+main{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-rows: 10rem 10rem;
+    grid-template-areas: 
+    "a b c"
+    "a b e"
+    "d d d";
+    
+}
+section{
+    border: 1px solid black;
+    padding: 1rem;
+
+}
+section.sla1{
+    grid-area: a;
+}
+section.sla2{
+    grid-area: b;
+}
+section.sla3{
+    grid-area: c;
+}
+section.sla4{
+    grid-area: d;
+}
+section.sla5{
+    grid-area: e;
+}

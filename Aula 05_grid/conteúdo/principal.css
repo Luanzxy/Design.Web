@@ -1,0 +1,41 @@
+main{
+    max-width: 70rem;
+    margin: 1rem auto;
+    display: grid;
+    gap: 1rem;
+    /* Assim como no felx, define 
+    o espaçamento entre áreas */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* a quantidade de valores deve ser igual a quantidade de colunas */
+     /* grid-templates-columns= define a LARGURA da coluna */
+    /* Unidade fr=fração */
+    /* posso usar a unidade 'fr' e as outras unidades */
+    grid-template-rows: 10rem 10rem;
+    /* grid-templates-rows= Define a ALTURA das linhas, porém cuidado!!
+    porque a altura ficará LIMITADA! 
+    a quantidade de valores dve ser igual a quantidade de LINHAS*/
+    
+    grid-template-areas: 
+    "c b d"
+    "a a ."
+    ;
+    /* A variável não pode começar por número, não pode ter só número, não pode ter espaço, não pode ter caracter especial e nem pode ficar na diagonal */
+
+}
+section{
+    border: 1px solid black;
+    padding: 1rem;
+    overflow: auto; /* POSSIBILITA A BARRA DE ROLAGEM */
+}
+section.noticias{
+     grid-area: a;  /* A definição de área é feita utilizando o atríbuto de grid-area */
+}
+section.comemoracao{
+    grid-area: b;
+}
+section.organizadores{
+    grid-area: c;
+}
+section.corrida{
+    grid-area: d;
+}
