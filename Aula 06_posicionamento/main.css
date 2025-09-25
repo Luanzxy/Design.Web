@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header, footer, section{
+    padding: 2rem;
+    background-color: lightcyan;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 0.7rem;
+    margin-bottom: 2rem;
+}
+header, footer{
+    background-color: khaki;
+    text-align: center;
+}
+main{
+    margin-top: 7rem;
+}
+header{
+    position: fixed;
+    /* Posiciona o elemento SOBRE a página, ativa o EIXO Z -
+    SOBREPÕE os elementos da páginas
+    Em relação ao comportamento de estilo, o elemento deixa de ser display: block para
+    ser display: inline-block, isto é, perde a largura
+    */
+    width: 100vw; /* *vw: viweport width = largura do dispositivo */
+    top: 0;
+
+    /* COORDENADAS - escolher no mínimo uma e no máximo 2, uma para o eixo e a outra para
+    o eixo y
+        top, left, bottom right
+    */
+    z-index: 1;
+}
+div#esmaecer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* 
+    a função rgba()
+    - recebe 4 parametros
+    - as cores deve ser de 0 a 255
+    - o alpha de 0 a 1
+    */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    /* PARA FICAR NO CENTRO */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bo
+
+}
+div#modal{
+    background-color:bisque;
+    padding: 2rem;
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    /* 
+    - não se trabalha com largura/altura min, máx...
+    - é importante colocar largura e altura por causa do position
+    */
+}
+h2{
+    background-color: cyan;
+    position: relative;
+    top: 10px;
+}

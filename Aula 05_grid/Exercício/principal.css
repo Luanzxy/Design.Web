@@ -1,4 +1,5 @@
 main{
+    max-width: 70rem;
     display: grid;
     gap: 1rem;
     grid-template-columns: 2fr 2fr 3fr;
