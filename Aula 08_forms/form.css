@@ -1,0 +1,12 @@
+label[for]{
+    /* O for  */
+    display: inline-block;
+    /*  */
+    width: 12rem;
+    /* a marcação de <label> não permite definição de largura
+     porque ela tem um comportamento display-inline,
+      por isso foi necessário definir o display com o valor inline-block */
+    vertical-align: top;
+    /* o atríbuto de vertical-align deixará o rótulo alinhadamente ao lado */
+
+}
