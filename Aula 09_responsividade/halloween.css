@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+div{
+    text-align: center;
+}
+main{
+    display: flex;
+    flex-wrap: wrap; /*  */
+    gap: 1rem;
+    justify-content: center;
+}
+section{
+    border: 1px solid black;
+    padding: 1rem;
+    flex-basis: 22%; /*  */
+}
+@media (max-width: 1440px){
+    /* é a técnica condicional para responsividade com técnica */
+    body{
+        background-color: palegoldenrod;
+    }
+    section{
+        flex-basis: 48%; /* permitira que fique 2 section´s  */
+    }
+}
+@media (max-width: 744px){
+    /*  */
+    body{
+        background-color: salmon;
+    }
+    section{
+        flex-basis: 98%; /* permitira que cada section fique em uma linha */
+    }
+}
+footer{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
