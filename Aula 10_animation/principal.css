@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap')
+:root{
+    /* DEFINIÇÃO DE VARIAVEIS NO ELEMENTO PRINCIPAL (BOOT/HTML) */
+    --principalbg: blue;
+    --principalbg: green;
+}
+body{
+    background-color: var(--princ-bg);
+    
+    font-family: "BBH", system-ui
+}
+/* 
+SELETORES:
+* ( seleciona tudo)
+p.destaque { } a tag que tem o class 'destaque'
+.destaque { }
+#destaque{ }
+section#destaque{ } chama o id da section destaque
+ol, ul{ } seleciona os dois atributos
+p a { seleciona todas as marcações ancora dentro de 'p'
+            <p><span><a>aqui></span></p>
+}
+p > a{ seleciona todas ar marcações de ancoras FILHOS DIRETAS do 'p'
+}
+header + section{ seleciona a marcação que está DIRETAMENTE depois da marcação de HEADER
+}
+.tx-grande.verde{
+    seleciona a marcação qu tem esses valores na class
+}
+.tx-grande, verde{
+    seleciona a marcação que tem a class .verde que está
+    DENTRO da tag que tem a class .tx-grande
+
+
+p:hover{ 'hover' é uma subclasse - efeito de passar o mouse }
+li:first-chid{
+
+}
+tr:nth-chid{ intteiro ou odd ou even}{
+    enésimo
+    even - filhos pares
+    odd - filhos impares
+
+img[src='face.png']{}
+input[type='submit']{}
+input[type='radio']{}
+label[for]{
+    seleciona todas as marcações de label com o atributo de 'for' definido
+}
+
+*/
+header + section{
+    background-color: cornflowerblue;
+}
+.tx-grande.verde{
+    color: crimson;
+}
+section{
+    height: 20rem;
+    background-color: floralwhite;
+    display: flex;
+    align-items: center;
+}
+section p{
+    animation-name: mostrar; /* nome da animação que é livre */
+    animation-duration: 2s; /* duração da animação */
+    animation-delay: 5ms;
+    animation-iteration-count: infinite; /* NÃO USAR */
+}
+@keyframes mostrar{ /* ESTUDAR SOBRE MICROINTERAÇÕES */
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
