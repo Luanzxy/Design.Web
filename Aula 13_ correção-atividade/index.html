@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        /*  O seletor de * vai selecionar todas as marcações */
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /*  */
+    }
+    :root{
+        --azulescuro: #08254F;
+        --corcreme: #D8D4CB;
+    }
+    section{
+        padding: 2rem;
+    }
+    section:first-child{
+        background-color: var(--corcreme);
+    }
+    /* body{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+    } */
+    section:nth-child(3), section:nth-child(2){
+        max-width: 70rem;
+        margin: 0 auto;
+        
+    }
+    section:nth-child(3){
+        border: 1px solid black;
+    }
+    section:nth-child(2){
+        display: flex;
+        gap: 2rem
+    }
+    section:nth-child(2) div{
+        color: white;
+        background-color: var(--azulescuro);
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+        top: -2rem;
+        /* Ele não altera as dimensoes do elemento quando colocar o padding */
+    }
+    section:nth-child(2) h2{
+        flex-basis: 31.422222%;
+        /* width x flex-basis */
+    }
+    section:nth-child(2) div h2{
+        margin-bottom: 2rem;
+    }
+    /* max-width: 70rem;
+        /* A largura máxima ajuda na responsividade  */
+        /* border: 1px solid black;
+        margin: 0 auto;
+        Posiciona a página no centro do navegador  */
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Só porque a página tem que ter</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate eum fugiat aliquam sunt, cum mollitia dicta saepe eaque eius nemo beatae, ipsum atque fugit laboriosam non, necessitatibus dolorum totam quam.</p>
+    </section>
+    <section>
+        <h2>QUALQUER COISA</h2>
+        <div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+    <section>
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius dolores vitae dignissimos assumenda placeat consequatur iusto pariatur delectus, perferendis repellendus sit, tempore molestias possimus corrupti earum iure voluptatem consectetur. Ratione.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum sed omnis laudantium repellat, repellendus labore aliquid tenetur tempora, itaque et quae odio? Eaque assumenda veritatis magni veniam? Dolorum.</p>    
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum sed omnis laudantium repellat, repellendus labore aliquid tenetur tempora, itaque et quae odio? Eaque assumenda veritatis magni veniam? Dolorum.</p>    
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum sed omnis laudantium repellat, repellendus labore aliquid tenetur tempora, itaque et quae odio? Eaque assumenda veritatis magni veniam? Dolorum.</p>    
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores dolorum sed omnis laudantium repellat, repellendus labore aliquid tenetur tempora, itaque et quae odio? Eaque assumenda veritatis magni veniam? Dolorum.</p>    
+    </section>
+    
+</body>
+</html>
