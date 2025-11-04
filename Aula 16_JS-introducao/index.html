@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - Introdução</title>
+</head>
+<body>
+    <script>
+        // document.getElementById("mensagem").innerHTML = "Olá mundo com getElementById.";
+        // /* Essa linha não funcionará pois ainda não foi criado o DOM para esse script */
+    </script>
+    <p id="mensagem"></p>
+
+
+    <script>
+        /* 
+        - javascript é uma linguagem de programação,
+        diferente de html (marcação) e css (formatação)
+        - tripé do desenvolvimento:
+            - html - conteúdo
+            - css - estilo
+            - javascript - interatividade
+
+        - javascript não é java ( é uma ling de prog, porém lado
+        servidor de altonível )
+        - sensível à capitulação, ou seja, é sensível a letras maisculas e minusculas.
+        - é possível lusar no lado cliente, servidor, mobile e desktop
+        
+        -DOM - Modelo de documento do objeto
+        */
+        // window.alert('Olá Mundo')
+        // window.confirm("Como está")
+        // var nome = window.prompt("Qual seu nome?") 
+
+       document.write("<p>Olá mundo</p>");
+       document.getElementById("mensagem").innerHTML = "Olá mundo com getElementById.";
+
+        // console.log("Olá mundo console:"+nome);
+
+        // var, let, const
+        var a; // Declaração de variável global
+        let b; // Declaração de variável local, mais indicado no geral,
+               //  visto que ocupa menos espaço no computador do usuário 
+
+               // FORTEMENTE TIPADOS - significa que é preciso declarar o tipo da variável
+               // JAVASCRIPT NÃO É FORTEMENTE TIPADO, pois pode se colocar vários tipos de variáveis 
+        let nome = "INFOWEB";
+        let inteiro = 3;
+        let float = 5.7;
+        let boo = true; // booleano
+
+        console.log(inteiro+float+nome);
+        console.log(5487+98);
+        console.log(5487+98);
+        console.log(5487+98);
+        console.log(5487+98);
+        console.log("INTEIRO: " + inteiro);
+        console.log("INTEIRO: " + inteiro++); // operador ++ = +1
+        console.log("INTEIRO: " + inteiro);
+
+        //operadores relacionais
+
+        console.log("4==6");
+        console.log(4==6);
+
+        console.log("4!=5")
+        console.log(4!=5)
+
+        console.log("'5'==5");
+        console.log("5"==5); // verifica o valor além do tipo
+
+        console.log("'5'===5")
+        console.log("5===5")
+
+        console.log(5>6);
+        console.log(5<6);
+        console.log(5>=6);
+        console.log(5<=6);
+        console.log(5<=6 && 5==5); // && = and
+        console.log(5<=6 || 5==5); // || = or
+
+
+        //ESTRTURA CONDICIONAL
+
+        let idade = window.prompt("Qual sua idade");
+        if(idade >= 18){
+            console.log("Maior de idade");
+        }else{
+            console.log("Menor de idade");
+        }
+
+
+    </script>
+    
+</body>
+</html>
