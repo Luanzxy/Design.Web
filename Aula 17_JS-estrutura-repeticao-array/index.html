@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+    </style>
+
+    <label>N1:
+        <input type="number" id="n1">
+    </label>
+    <label>N2:
+        <input type="number" id="n2">
+    </label>
+    <button id="somar">SOMAR</button>
+    <P id="resultado"></P>
+    <!-- GO RN - centro convenções -->
+
+    <script>
+
+        const btnsomar = document.querySelector("#somar");
+        // const: vai fazer com que o valor fique permanentemente, ou seja, não é alterada.
+        btnsomar.addEventListener("click", function(e){
+            console.log("EVENTO CLICAR")
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let somar = parseInt(n1) + parseInt(n2)
+            console.log(somar);
+            document.getElementById("resultado").innerHTML = somar;
+        })
+
+
+        //estrutura condicional : usada para adicionar condições.
+
+        // let opcao = 2;
+        let opcao = parseInt(window.prompt("Digite um número entre 1 e 3:"));
+
+        // parseInt: transforma a variável em inteiro
+        switch(opcao){
+            case 1: console.log("VALOR: 1"); break;
+            case 2: console.log("VALOR: 2"); break;
+            case 3: console.log("VALOR: 3"); break;
+            default: console.log("NENHUMA OPÇÃO");
+        }
+
+        //ARRAY
+        let lista = [4,6,7,8,7,5]
+        console.log(lista[2]); //imprime "7" -- porque o 1o índice é 0
+        lista.push(5); //adicionar
+        console.log(lista.toString());
+        console.log(lista.length); //tamanho
+        delete lista[1]; //deleta o valor dentro do índice 1
+        console.log(lista.toString()); //imprime a lista
+        lista[0] = 54; // declaração no novo valor par ao índice 0
+
+        let alunos = ['Aline', 'Amanda', 'José', 'Airton'];
+
+        let emocoes = ["🙂","😍","😘","😉","😀"]
+
+        console.log(Math.random())
+        //Math.random() retorna um número randômico entre 0 e 1
+        console.log(Math.random()*8);
+        let x = Math.floor(Math.random()*8);
+        console.log(x);
+        document.write(`<p> ${emocoes[x]} </p>`);
+        document.write("<p>"+emocoes[x] +"</p>");
+
+        //ESTRUTURA DE REPETIÇÃO
+        for(let n = 0; n<=5 ; n++){ // VALOR INICIAL ; CONDIÇÃO ; INCREMENTO
+            console.log(n);
+        }
+        for(let item in emocoes){
+            console.log(emocoes[item] + " - ");
+
+        }
+        for(let item in alunos){
+            console.log(alunos[item] + " - ");
+        }
+        alunos.forEach(fuction(index){
+            console.log("forech - " + index);
+        })
+        
+
+
+    </script>
+    
+</body>
+</html>
