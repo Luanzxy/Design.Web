@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - Introdução</title>
+</head>
+<body>
+    <script>
+        // document.getElementById("mensagem").innerHTML = "Olá mundo com getElementById.";
+        // /* Essa linha não funcionará pois ainda não foi criado o DOM para esse script */
+    </script>
+    <p id="mensagem"></p>
+
+
+    <script>
+        /* 
+        - javascript é uma linguagem de programação,
+        diferente de html (marcação) e css (formatação)
+        - tripé do desenvolvimento:
+            - html - conteúdo
+            - css - estilo
+            - javascript - interatividade
+
+        - javascript não é java ( é uma ling de prog, porém lado
+        servidor de altonível )
+        - sensível à capitulação, ou seja, é sensível a letras maisculas e minusculas.
+        - é possível usar no lado cliente, servidor, mobile e desktop
+        
+        -DOM - Modelo de objeto de documento
+        */
+        // window.alert('Olá Mundo') // Exibe uma caixa de alerta na tela
+        // window.confirm("Como está") // Exibe uma caixa de confirmação com botões OK e Cancelar
+        // var nome = window.prompt("Qual seu nome?") // Exibe uma caixa para o usuário digitar texto
+
+       document.write("<p>Olá mundo</p>"); // Escreve HTML diretamente no documento
+       document.getElementById("mensagem").innerHTML = "Olá mundo com getElementById."; // Busca elemento pelo ID e insere conteúdo
+
+        // console.log("Olá mundo console:"+nome); // Imprime mensagem no console do navegador
+
+        // var, let, const
+        var a; // Declaração de variável global
+        let b; // Declaração de variável local, mais indicado no geral,
+               //  visto que ocupa menos espaço no computador do usuário 
+
+               // FORTEMENTE TIPADOS - significa que é preciso declarar o tipo da variável
+               // JAVASCRIPT NÃO É FORTEMENTE TIPADO, pois pode se colocar vários tipos de variáveis 
+        let nome = "INFOWEB"; // Declaração de variável tipo string (texto)
+        let inteiro = 3; // Declaração de variável tipo number (número inteiro)
+        let float = 5.7; // Declaração de variável tipo number (número decimal/float)
+        let boo = true; // booleano - tipo boolean (verdadeiro ou falso)
+
+        console.log(inteiro+float+nome); // Concatena número + número + string = "8.7INFOWEB"
+        console.log(5487+98); // Soma dois números = 5585
+        console.log(5487+98); // Repetição da mesma operação
+        console.log(5487+98); // Repetição da mesma operação
+        console.log(5487+98); // Repetição da mesma operação
+        console.log("INTEIRO: " + inteiro); // Imprime o valor da variável inteiro (3)
+        console.log("INTEIRO: " + inteiro++); // Imprime 3 e DEPOIS incrementa (pós-incremento)
+        console.log("INTEIRO: " + inteiro); // Agora imprime 4 (após o incremento)
+
+        //operadores relacionais
+
+        console.log("4==6"); // Imprime a string literal "4==6" (não executa comparação)
+        console.log(4==6); // Compara se 4 é igual a 6 = false
+
+        console.log("4!=5") // Imprime a string literal "4!=5"
+        console.log(4!=5) // Compara se 4 é diferente de 5 = true
+
+        console.log("'5'==5"); // Imprime a string literal "'5'==5"
+        console.log("5"==5); // verifica o valor além do tipo - Compara string "5" com número 5 usando == (igualdade frouxa) = true
+
+        console.log("'5'===5") // Imprime a string literal "'5'===5"
+        console.log("5===5") // Imprime a string literal "5===5"
+
+        console.log(5>6); // Verifica se 5 é maior que 6 = false
+        console.log(5<6); // Verifica se 5 é menor que 6 = true
+        console.log(5>=6); // Verifica se 5 é maior ou igual a 6 = false
+        console.log(5<=6); // Verifica se 5 é menor ou igual a 6 = true
+        console.log(5<=6 && 5==5); // && = and - Verifica se AMBAS condições são verdadeiras = true
+        console.log(5<=6 || 5==5); // || = or - Verifica se PELO MENOS UMA condição é verdadeira = true
+
+
+        //ESTRTURA CONDICIONAL
+
+        let idade = window.prompt("Qual sua idade"); // Solicita a idade do usuário através de uma caixa de diálogo
+        if(idade >= 18){ // Se a idade for maior ou igual a 18
+            console.log("Maior de idade"); // Imprime "Maior de idade"
+        }else{ // Caso contrário (idade menor que 18)
+            console.log("Menor de idade"); // Imprime "Menor de idade"
+        }
+
+
+    </script>
+    
+</body>
+</html>
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        /* Área para estilos CSS (vazia neste exemplo) */
+    </style>
+
+    <!-- Label e input para o primeiro número -->
+    <label>N1:
+        <input type="number" id="n1">
+    </label>
+    <!-- Label e input para o segundo número -->
+    <label>N2:
+        <input type="number" id="n2">
+    </label>
+    <!-- Botão para executar a soma -->
+    <button id="somar">SOMAR</button>
+    <!-- Parágrafo onde será exibido o resultado -->
+    <P id="resultado"></P>
+    <!-- GO RN - centro convenções -->
+
+    <script>
+
+        const btnsomar = document.querySelector("#somar"); // Seleciona o botão com id "somar" usando querySelector
+        // const: vai fazer com que o valor fique permanentemente, ou seja, não é alterada.
+        btnsomar.addEventListener("click", function(e){ // Adiciona um evento de clique ao botão
+            console.log("EVENTO CLICAR") // Imprime mensagem no console quando o botão é clicado
+            let n1 = document.getElementById("n1").value; // Captura o valor digitado no input n1
+            let n2 = document.getElementById("n2").value; // Captura o valor digitado no input n2
+            let somar = parseInt(n1) + parseInt(n2) // Converte os valores para inteiros e soma
+            console.log(somar); // Imprime o resultado da soma no console
+            document.getElementById("resultado").innerHTML = somar; // Exibe o resultado no parágrafo com id "resultado"
+        })
+
+
+        //estrutura condicional : usada para adicionar condições.
+
+        // let opcao = 2; // Valor fixo comentado
+        let opcao = parseInt(window.prompt("Digite um número entre 1 e 3:")); // Solicita um número ao usuário e converte para inteiro
+
+        // parseInt: transforma a variável em inteiro
+        switch(opcao){ // Estrutura switch para verificar o valor de opcao
+            case 1: console.log("VALOR: 1"); break; // Se opcao for 1, imprime "VALOR: 1" e sai do switch
+            case 2: console.log("VALOR: 2"); break; // Se opcao for 2, imprime "VALOR: 2" e sai do switch
+            case 3: console.log("VALOR: 3"); break; // Se opcao for 3, imprime "VALOR: 3" e sai do switch
+            default: console.log("NENHUMA OPÇÃO"); // Se não for nenhum dos casos acima, imprime "NENHUMA OPÇÃO"
+        }
+
+        //ARRAY
+        let lista = [4,6,7,8,7,5] // Declara um array com 6 elementos numéricos
+        console.log(lista[2]); //imprime "7" -- porque o 1o índice é 0 (índice 2 é o terceiro elemento)
+        lista.push(5); //adicionar - Adiciona o número 5 no final do array
+        console.log(lista.toString()); // Converte o array em string e imprime
+        console.log(lista.length); //tamanho - Imprime a quantidade de elementos no array
+        delete lista[1]; //deleta o valor dentro do índice 1 (deixa vazio mas não remove a posição)
+        console.log(lista.toString()); //imprime a lista - Mostra o array com o índice 1 vazio
+        lista[0] = 54; // declaração no novo valor para o índice 0 - Substitui o primeiro elemento por 54
+
+        let alunos = ['Aline', 'Amanda', 'José', 'Airton']; // Declara um array de strings com nomes de alunos
+
+        let emocoes = ["🙂","😍","😘","😉","😀"] // Declara um array com emojis
+
+        console.log(Math.random()) // Imprime um número aleatório entre 0 (inclusivo) e 1 (exclusivo)
+        //Math.random() retorna um número randômico entre 0 e 1
+        console.log(Math.random()*8); // Multiplica o número aleatório por 8 (resultado entre 0 e 8)
+        let x = Math.floor(Math.random()*8); // Gera número aleatório entre 0 e 7 (Math.floor arredonda para baixo)
+        console.log(x); // Imprime o número aleatório gerado
+        document.write(`<p> ${emocoes[x]} </p>`); // Escreve um emoji aleatório usando template literals
+        document.write("<p>"+emocoes[x] +"</p>"); // Outra forma de escrever o mesmo emoji usando concatenação
+
+        //ESTRUTURA DE REPETIÇÃO
+        for(let n = 0; n<=5 ; n++){ // VALOR INICIAL ; CONDIÇÃO ; INCREMENTO - Loop de 0 até 5
+            console.log(n); // Imprime cada número de 0 a 5
+        }
+        for(let item in emocoes){ // Loop que percorre os índices do array emocoes
+            console.log(emocoes[item] + " - "); // Imprime cada emoji seguido de " - "
+
+        }
+        for(let item in alunos){ // Loop que percorre os índices do array alunos
+            console.log(alunos[item] + " - "); // Imprime cada nome seguido de " - "
+        }
+        alunos.forEach(function(index){ // Método forEach percorre cada elemento do array (obs: havia erro de digitação "fuction")
+            console.log("foreach - " + index); // Imprime "forech - " seguido do nome do aluno
+        })
+        
+
+
+    </script>
+    
+</body>
+</html>
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT - Funções</title>
+</head>
+<body>
+
+    <!-- Parágrafo com texto exemplo e id "texto" -->
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magni assumenda et corrupti quas perspiciatis similique atque delectus nostrum ipsam laudantium ipsa architecto natus quisquam quod velit, suscipit quia tenetur.</p>
+    <!-- Input tipo color para selecionar uma cor -->
+    <input type="color" id="cor">
+    <!-- Botão que chama a função mudarcor() diretamente no onclick -->
+    <button id="mudarcor" onclick="mudarcor()">MUDAR COR</button>
+    <!-- Botão que terá evento adicionado via JavaScript -->
+    <button id="btn">MUDAR COR 2</button>
+    <!-- Botão que mudará a borda do texto -->
+    <button id="borda2">MUDAR BORDA</button>
+
+    <script>
+
+        let btn = document.getElementById("btn"); // Seleciona o botão com id "btn"
+        //essa forma é a indicada - Usar addEventListener é a forma recomendada
+        btn.addEventListener("click", function (e){ // Adiciona evento de clique ao botão
+            let cor = document.getElementById("cor").value; //VALUE!!! Valor que está no input - Captura a cor selecionada
+            //document.body.style.backgroundColor = cor; // Linha comentada que mudaria o fundo da página
+            document.getElementById("texto").style.color = cor; // Muda a cor do texto do parágrafo
+    
+        });
+        let borda2 = document.getElementById("borda2"); // Seleciona o botão com id "borda2"
+        borda2.addEventListener("click", function (e){ // Adiciona evento de clique ao botão borda2
+            let cor = document.getElementById("cor").value; // Captura a cor selecionada no input
+            document.getElementById("texto").style.border = `2rem solid ${cor}`; // Aplica borda de 2rem sólida com a cor selecionada usando template literals
+        })
+
+        function mudarcor(){ // Declara uma função chamada mudarcor
+            let cor = document.getElementById("cor").value; // Captura a cor selecionada no input
+            document.body.style.backgroundColor = cor; // Muda a cor de fundo de toda a página
+        }
+
+
+
+        function somar(){ // Declara uma função simples sem parâmetros
+            return 3+8; // Retorna sempre o valor fixo 11 (3+8)
+        }
+        console.log(somar()); // Chama a função e imprime o resultado (11)
+        console.log(somar()); // Chama novamente e imprime 11
+        console.log(somar()); // Chama mais uma vez e imprime 11
+
+        function somar2(num1, num2){ // Declara função que recebe 2 parâmetros
+            return num1+num2; // Retorna a soma dos dois parâmetros
+        }
+        function somar3(num1,num2,num3){ // Declara função que recebe 3 parâmetros
+            return num1+num2+num3; // Retorna a soma dos três parâmetros
+        }
+        console.log(somar3(5,8,9)); // Chama somar3 com os valores 5, 8 e 9, imprime 22
+
+        function somar4(num1, num2){ // Declara função com validação de parâmetros
+            if(!isNaN(num1) && !isNaN(num2)){ // Verifica se ambos os parâmetros são números
+                //isNaN: Verifica se é um número (is Not a Number - retorna true se NÃO for número)
+                //!: operador de negação - inverte o resultado (true vira false e vice-versa)
+                //&&: operador lógico AND - verifica se os dois são verdadeiros
+                return num1+num2; // Se ambos forem números, retorna a soma (obs: havia erro "num+num2")
+            }else return "Colocar parâmetro numérico" // Se algum não for número, retorna mensagem de erro
+        }
+        console.log(somar4(5, 'teste')) // Chama função com número e string, retornará a mensagem de erro
+
+        function somar5(num1=0,num2=0){ // Declara função com parâmetros que têm valores padrão (default) de 0
+            //Se não passar valores ao chamar a função, usará 0 como padrão
+            return num1+num2; // Retorna a soma dos dois parâmetros
+        }
+        console.log(somar5(7)); // Chama função passando apenas 1 parâmetro (7), num2 usará o valor padrão 0, resultado: 7
+
+        function borda(nome, borda){ // Declara função que recebe cor e espessura da borda
+            document.body.style.borderWidth = borda+'rem'; // Define a espessura da borda em rem
+            document.body.style.borderStyle = 'solid'; // Define o estilo da borda como sólida
+            document.body.style.borderColor = nome; // Define a cor da borda
+        }
+        borda('black',2) // Chama a função criando uma borda preta de 2rem ao redor da página
+
+    </script>
+    
+</body>
+</html>
