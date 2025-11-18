@@ -7,27 +7,30 @@
 </head>
 <body>
 
-    <label for=""></label>
+    <label for="nome">Digite seu nome:</label>
     <input id="nome"></input>
-    <button id="btn"></button>
-    <p id=""></p>
+    <button id="btn">Inserir</button>
+    <p id="texto"></p>
 
     <script>
         
         let lista = ['Joana', 'Luan', 'Dani']
 
         function exibirlista(){
-
-        for (let index = 0; index < lista.length; index++) {
-            document.write(`${lista[index]} <br>`)
-            document.getElementById("btn").addEventListener("click", function() {
-                let nome = document.getElementById("nome").value
-                lista.push(nome)
-                exibir
-            })
-
+            document.getElementById("texto").innerHTML = ""
+            for (let index = 0; index < lista.length ; index++) {
+                document.getElementById("texto").innerHTML += lista[index] + "<br>"
+            }
         }
-        }   
+        
+        botao = document.getElementById("btn")
+        botao.addEventListener("click", function(e) {
+            let nome = document.getElementById("nome").value
+            document.getElementById("nome").value = ""
+            lista.push(nome)
+            exibirlista()
+        })
+  
         exibirlista()
         
     </script>
