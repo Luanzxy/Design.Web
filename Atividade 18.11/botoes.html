@@ -5,38 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATIVIDADE 18/11 - BOTÕES COLORIDOS</title>
     <style>
-    button{
-
-    width: 10rem;
-    height: 10rem;
-    border: 1px solid white;
-    border-radius: 100%;
-    }
+        button {
+            width: 10rem;
+            height: 10rem;
+            border: 1px solid white;
+            border-radius: 100%;
+        }
+        #adicionar {
+            background-color: #333;
+            color: white;
+            font-size: 2rem;
+        }
     </style>
 </head>
 <body>
-
-
-
+    
+    <div id="container"></div>
+    <button id="adicionar" onclick="adicionarBotao()">+</button>
 
     <script>
-        function cor(red, green, blue){
-            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+        const container = document.getElementById('container');
+        let botoes = [];
+
+        function cor(red, green, blue) {
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
         }
 
-        function criarbola(){
-            r = Math.floor(Math.random()*255)
-            g = Math.floor(Math.random()*255)
-            b = Math.floor(Math.random()*255)
-            document.write(`<button onclick="cor(${r},${g},${b})" style="background-color: rgb(${r},${g},${b})"></button>`)
-
+        function criarBola() {
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            
+            const botao = document.createElement('button');
+            botao.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            botao.onclick = function() {
+                cor(r, g, b);
+            };
+            
+            botao.dataset.r = r;
+            botao.dataset.g = g;
+            botao.dataset.b = b;
+            
+            container.appendChild(botao);
+            botoes.push(botao);
         }
-        for(i = 0; i < 100; i++){
-            criarbola()
+
+        for(let i = 0; i < 100; i++) {
+            criarBola();
         }
 
+        function adicionarBotao() {
+            criarBola();
+        }
 
+        setInterval(function() {
+            botoes.forEach(function(botao) {
+                const r = Math.floor(Math.random() * 255);
+                const g = Math.floor(Math.random() * 255);
+                const b = Math.floor(Math.random() * 255);
+                
+                botao.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                botao.dataset.r = r;
+                botao.dataset.g = g;
+                botao.dataset.b = b;
+                
+                botao.onclick = function() {
+                    cor(r, g, b);
+                };
+            });
+        }, 2000);
     </script>
-    
+
 </body>
 </html>

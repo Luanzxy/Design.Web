@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar senhas</title>
+</head>
+<body>
+
+    
+    <style>
+        body {
+            margin: 20px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+
+    <label>Senha:</label>
+    <input type="password" id="senha"><br>
+
+    <label>Confirmação de senha:</label>
+    <input type="password" id="confirmacao">
+
+    <button onclick="verificar()">Verifica senhas</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            const senha = document.getElementById("senha").value;
+            const confirmacao = document.getElementById("confirmacao").value;
+            const resultado = document.getElementById("resultado");
+
+            if (senha === "" || confirmacao === "") {
+                resultado.textContent = "Preencha os dois campos.";
+                resultado.style.color = "red";
+                return;
+            }
+
+            if (senha === confirmacao) {
+                resultado.textContent = "Iguais";
+                resultado.style.color = "green";
+            } else {
+                resultado.textContent = "Diferentes";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
