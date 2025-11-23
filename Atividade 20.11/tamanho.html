@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE 20.11</title>
+</head>
+<body>
+
+    <style>
+    .s1 { font-size: 1rem; }
+    .s2 { font-size: 2rem; }
+    .s3 { font-size: 3rem; }
+    .s4 { font-size: 4rem; }
+    .s5 { font-size: 5rem; }
+  </style>
+</head>
+<body>
+
+  <h2>Digite um texto:</h2>
+  <input type="text" id="texto" />
+  <button onclick="mostrar()">Mostrar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function mostrar() {
+      const t = document.getElementById("texto").value;
+      const r = document.getElementById("resultado");
+
+      r.innerHTML = `
+        <p class="s1">${t}</p>
+        <p class="s2">${t}</p>
+        <p class="s3">${t}</p>
+        <p class="s4">${t}</p>
+        <p class="s5">${t}</p>
+      `;
+    }
+  </script>
+
+    
+    
+</body>
+</html>
