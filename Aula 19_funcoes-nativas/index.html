@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNÇÕES NATIVAS</title>
+</head>
+<body>
+
+    <p id="segundos"></p>
+
+    <script>
+        let nome = "INFOWEB";
+
+        console.log("Comprimento da string: "+ nome.length); // O length define o comprimento da variável informnado a quantidade de caracter.
+        console.log("Posição do caracter da string: "+ nome.charAt(0)); // O charAt faz com que consiga pegar um caracter específico
+        console.log("Substituir string: "+ nome.replace("INFO","INFORMÁTICA PARA")); // O replace faz com que a variável tenha mais de um atributo.
+        console.log("Pegar uma substring da string: " + nome.substr(4,3));
+        console.log("Divide a string: "+ nome.split("O")[0]); // retorna uma array(lista)
+        console.log("Coloca em minúsculas: "+ nome.toLowerCase());
+        console.log("Coloca em maiúsculas: "+ nome.toUpperCase());
+
+        nome = "    INFOWEB    "
+        console.log(nome);
+        console.log("Remove os espaços laterais da string: " + nome.trim());
+        //nome = nome.trim();
+        console.log("Juntar string: " + nome.trim().concat(" IFRN"));
+
+        /*FUNÇÕES NATIVAS DE MATEMÁTICA */
+
+        console.log("Valor de pi:" + Math.PI);
+        let num = 54.6;
+
+        console.log("Arredondamento sempre para cima: " + Math.ceil(num));
+        console.log("Arredondamento sempre para baixo: " + Math.floor(num));
+        console.log("Arredondamento padrão: " + Math.round(num)); // Arredonda para o número inteiro mais próximo
+        console.log("Número aleatório " + Math.random()); // Gera um número randômico. Entre 0 e 1
+        console.log("Número aleatório " + Math.random()*5); // Entre 0 e 5
+        console.log("Retorna o menor número: " + Math.min(54,76,4,6,5543,3454,54,43,22,21,14));
+        console.log("Retorna o maior número: " + Math.max(54,76,4,6,5543,3454,54,43,22,21,14));
+        console.log("Potência: " + Math.pow(2,4));
+        console.log("Raiz quadrada: " + Math.sqrt(9));
+
+        /* FUNÇÕES NATIVAS DE DATAS */
+
+        let mes = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+        const data = new Date();
+
+        console.log("Dia de hoje: " + data.getDate());
+        console.log("Mês: " + (data.getMonth() +1) );
+        console.log("Ano: " + data.getFullYear());
+        console.log("Data completa: " + data.getDate() +"/"+ (data.getMonth() +1) +"/"+ data.getFullYear());
+        console.log("Data completa: " + data.getDate() +" de "+ mes[10] +" de "+ data.getFullYear());
+
+
+        function hora(){
+            let d = new Date();
+            document.getElementById("segundos").innerHTML = d.getSeconds();
+        }
+        console.log(setInterval(hora,1000))
+    </script>
+
+</body>
+</html>
