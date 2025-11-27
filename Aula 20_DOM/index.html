@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação do DOM</title>
+    <style>
+        .destaque{
+            background-color: rgb(102, 255, 0);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="paragrafocomid">DOM - MODELO DE OBJETO DE DOCUMENTO</p>
+    <span>SPAN1</span>
+    <p class="paragrafocomclass">DOM - MODELO DE OBJETO DE DOCUMENTO <span>SPAN2</span></p>
+ <!-- O script DEVE SER EXTERNO <script> src="nomedoarquivo.js"></script>  -->
+
+
+  <!-- atributos personalizados - existe uma prefixo que é usado para
+   atributos personalizados "data" -->
+<ol quantidade="8" data-produtos="10 ">
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+    <li>item</li>
+
+    <li>item</li>
+</ol>
+
+<figure>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnTw8W9yC3YClswCH6T26nP_vBvQt1cUpt7g&s" alt="">
+</figure>
+
+<img src="https://media.istockphoto.com/id/878587072/pt/foto/china-flag-a-series-of-flags-of-the-world.jpg?s=612x612&w=0&k=20&c=G9GgV3OdBIC2zxzmUqCSm9KvmUcimRpx9dcvJ92BLyY=" alt="">
+
+<button class="trocarimagem">TROCAR IMAGEM</button>
+
+<script>
+        /* 
+            MANIPULAÇÃO DE DOM
+        */
+
+        const pcomid = document.getElementById("paragrafocomid");
+       // const pcomclass = document.querySelector(".paragrafocomclass span");
+        const pcomclass = document.querySelector("p span");
+        pcomclass.innerHTML = "<b>NOVO</b> texto para o span.";
+
+        document.querySelector(".paragrafocomclass").classList.add("destaque");
+        // adiciona o valor 'destaque' ao atributo class
+        //pode receber vários valores, diferente do 'id'
+
+        document.getElementsByTagName("li")[1].style.color = "green";
+        console.log(document.getElementsByTagName("li").length);
+
+        let imagem = document.getElementById;
+
+
+        console.log(imagem.getAttribute("src"));
+        console.log(imagem.getAttribute("width"));
+        // .setAttribute("src", "novovalor");
+;
+        const trocarimagem = document.querySelector(".trocarimagem");
+        function trocar(){
+            let imagem = set.getElementById("1");
+
+        }
+
+        trocarimagem.addEventListener("click",trocar);
+
+        const lista = document.querySelector("ol");
+        console.log(lista.getAttribute("quantidade")); // pega o valor de um produto personalizado
+        console.log(lista.hasAttribute("quantidade")); // verifica se existe o atributo
+        lista.removeAttribute("quantidade");
+        console.log(lista.hasAttribute("quantidade"));
+
+        console.log(lista.dataset.produtos); // o dataset pega o valor após o prefixo "data-"
+        console.log(lista.attributes); // lista todos os atributos
+
+
+</script>
+    
+</body>
+</html>
