@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS</title>
+    <style>
+        .grande{
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="cadastro">
+        <label>
+            Nome: <input type="text">
+        </label>
+        <select name="cidade" id="">
+            <option value="natal">Natal</option>
+            <option value="recife">Recife</option>
+        </select>
+        <input type="submit">
+    </form>
+    
+
+    <ol id="alunos">
+        <li>Júlia</li>
+        <li>Eduarda</li>
+        <li>João</li>
+        <li>Maria</li>
+        <li>Juliana</li>
+    </ol>
+
+    
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, repellat voluptatem eius earum voluptatum iure distinctio cum aliquam quia corporis, commodi ipsa neque, sit vel id non ab impedit nostrum?</p>
+    <p>Quos rem cumque assumenda, iste dolor laudantium possimus unde nulla sunt aliquam repellendus, inventore cupiditate voluptas nihil. Fugit accusamus assumenda itaque, qui obcaecati sit facilis, aliquam pariatur natus voluptatibus nam.</p>
+    <p>Necessitatibus quibusdam vero animi eligendi ullam optio accusantium voluptatibus beatae dolorem, officiis magni assumenda sed atque in excepturi obcaecati quos explicabo cum numquam maxime ipsam libero. Repellat, eligendi? Eius, obcaecati.</p>
+    <p>Qui cum, vitae consectetur aspernatur voluptatem amet aliquid sequi incidunt, ad dolor iste autem esse eos fuga dignissimos facere cumque quia similique ex dolorum eveniet, doloremque recusandae earum. Repudiandae, tenetur?</p>
+    <p>Earum voluptatibus numquam quibusdam, laudantium nemo officia pariatur aut ipsum fugit hic repudiandae omnis minima quis ex voluptatem labore magnam maiores culpa quae veniam exercitationem rem. Sed accusantium consectetur repellat.</p>
+    <p>Suscipit est aut non alias mollitia saepe numquam et perferendis cumque facilis. Porro commodi nobis dolorum, tempore ipsum quod esse in minima voluptatum iste tempora corrupti explicabo maiores, autem libero!</p>
+    <p>Cupiditate animi amet excepturi exercitationem? Culpa pariatur maiores deserunt reprehenderit dolorum a enim. Saepe, expedita voluptatem natus harum, nemo aspernatur tenetur blanditiis laboriosam quos, quas magni dolorem. A, labore nemo.</p>
+    <p>Reiciendis tempore sed nulla omnis! Mollitia, dolor cum quibusdam aliquid sapiente ratione nulla accusamus necessitatibus tenetur, aperiam enim. Necessitatibus praesentium delectus vero voluptatum laboriosam numquam voluptatibus explicabo rerum, sunt illum?</p>
+    <p>Soluta quia beatae ipsum cupiditate dolores delectus aut nihil, enim, vel tempora iusto provident consequatur architecto velit quae tempore ea? Doloremque repellendus hic nesciunt, repudiandae iste animi sapiente. Deleniti, fugiat.</p>
+    <p>Unde error praesentium, aliquam molestiae vel maiores corporis debitis accusamus provident quis possimus eius libero sit, voluptates adipisci esse id? Provident deleniti incidunt eos totam ab assumenda aperiam tempore suscipit.</p>
+    <p>Quas, est. Optio, laborum consequuntur. Adipisci, ut. Excepturi aut delectus voluptatem earum! Est doloribus ipsum distinctio exercitationem tempora cupiditate beatae ducimus magni, amet, ex commodi quidem itaque cum eaque odio.</p>
+    <p>Magni cumque iste aliquid id omnis impedit dignissimos illo distinctio labore rem enim atque, suscipit mollitia sequi, laboriosam maxime, harum dolorem? Praesentium, quam aperiam? Obcaecati ratione facilis a! Omnis, esse.</p>
+    <p>Cum repudiandae quos laboriosam non reiciendis explicabo totam numquam praesentium dolorum sapiente aspernatur id a minus enim repellendus, suscipit, ex deserunt temporibus autem. Nihil officia esse error laudantium, molestiae cupiditate.</p>
+    <p>Cum praesentium dolorem nemo odit officiis quo expedita. Possimus, aliquid beatae? Qui maiores, voluptatem voluptates repellat obcaecati totam quidem dolores officia minus tempora. Nemo sed laudantium ut alias ea fuga.</p>
+    <p>Minima suscipit atque, odit autem, laudantium error beatae quia nulla veniam voluptates corporis enim earum voluptatibus ipsa illum ab blanditiis placeat consequatur delectus molestias! Eaque fuga necessitatibus excepturi natus porro.</p>
+    <p>Delectus doloribus velit iusto. Veniam excepturi quia libero earum non fugit aliquam velit cumque at ducimus totam quaerat iste voluptas dolore, magnam obcaecati sint sunt eum cum ipsum! Optio, velit?</p>
+    <p>Optio et officiis sint iure, fuga quam maxime possimus quod. Molestias minima a, quidem doloribus corrupti temporibus est adipisci maiores, dolorem porro consequatur? Dolorem voluptas iusto amet, sint culpa quod!</p>
+    <p>Odio, a placeat? Corporis dicta voluptate corrupti doloribus vel ratione explicabo ex id ducimus, odio dolorum exercitationem suscipit placeat aut! Deserunt ratione natus fugiat non modi veniam dolorum laborum excepturi.</p>
+    <p>Vitae officiis itaque dolores cumque libero, odit vel nihil fuga eveniet iure. Qui molestias quas iure unde, modi iusto quis doloremque ipsam quos, aliquid tempora distinctio enim inventore et tempore?</p>
+    <p>Quidem qui consequuntur amet esse, necessitatibus consequatur? Voluptatem similique error at deserunt adipisci beatae harum ullam ipsa officiis eveniet veniam temporibus corrupti soluta illum minima excepturi, quasi id aut quaerat?</p>
+    <script>
+        // similar ao querySelector
+        const lista = document.getElementById("alunos");
+        const novoli = document.createElement("li");
+        novoli.setAttribute('class', 'grande');
+        novoli.textContent = "NOVO ALUNO: VINICIUS"; // O 'textContent' recebe apenas texto, diferente do 'innerHTM'L, que pode receber além de texto outros atributos
+        lista.appendChild(novoli); // Coloca a nova LI na lista
+         // Variável lista e o novo filho nos parênteses
+         // lista.removeChild(novoli);
+         // remove o novoli da lista
+
+         //EVENTOS DE INTERFACE
+         // load
+         // unload: acionada quando a página é totalmente carregada
+         // error: quando tem um erro
+         // resize: quando a janela é redimensionada
+         // scroll: qunado a barra de rolagem é usada
+         const body = document.querySelector('body');
+         function eventoload(){ // A página começou a ser carregada
+            console.log('Função eventoload');
+         }
+         function eventoscroll(){
+            console.log('Função eventoscroll');
+         }
+         window.addEventListener("load",eventoload);
+         window.addEventListener("scroll",eventoscroll)
+
+         // EVENTOS DE TECLADO
+         // KEYDOWN - É PRESSIONADA a tecla
+         // KEYUP - solta a tecla
+         // KEYPRESS - (não é mais usada) teclado está pressionada
+
+         const input = document.querySelector("input");
+         function eventokeydown(e){
+            console.log("Evento eventokeydown: "+e.key)
+         }
+         input.addEventListener("keydown", eventokeydown)
+
+         const form = document.cadastro;  // quando o form tem o atributo na
+         function eventosubmit(){
+            alert("Evento submit");
+            // Foi usado alert porque a mensagem apaga
+            // já que os dados serão submetidos
+         }
+         form.addEventListener("submit", eventosubmit);
+
+         const cidade = form.cidade;
+                            //pega o select que está no form com name 'cidade'
+         function eventochange(){
+            console.log("Evento change");
+         }
+         cidade.addEventListener("change", eventochange)  
+         
+         //EVENTO DE MOUSE
+         // click, dbclick, mousedown, mouseup, mousemove,
+         // mouseover, mouseout
+
+         window.addEventListener('mousemove', eventomousemove);
+         function eventomousemove(e){
+            const x = e.clientX;
+            const y = e.clientY;
+            console.log(`Eixo x: ${x}. Eixo Y: ${y}`);
+         }
+    </script>
+    
+</body>
+</html>
