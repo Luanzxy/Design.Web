@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 02/12 - Cor Aleatória</title>
+</head>
+<body>
+
+    <h1 id="titulo">Design Web</h1>
+
+    <script>
+        function mudarCorTitulo() {
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+
+            document.getElementById("titulo").style.color =
+                `rgb(${r}, ${g}, ${b})`;
+        }
+
+        setInterval(mudarCorTitulo, 30000);
+
+        mudarCorTitulo();
+    </script>
+
+</body>
+</html>
